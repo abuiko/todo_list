@@ -68,6 +68,16 @@ input {
     background: rgb(26, 26, 26);
 }
 
+
+.grocery-container {
+    visibility: hidden;
+}
+
+.show-container {
+    visibility: visible;
+}
+
+
 .grocery-item {
     display: flex;
     align-items: center;
@@ -75,15 +85,10 @@ input {
     background: rgb(236, 236, 236);
     border-radius: 10px;
     padding: 0rem 1rem;
+    margin-bottom: 1rem;
 }
 
-.grocery-list {
-    visibility: hidden;
-}
 
-.grocery-list.visible {
-    visibility: visible;
-}
 
 .title {
     margin: 0.7rem 0rem;
