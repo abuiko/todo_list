@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
     <title>Grocery List</title>
 </head>
+
 <body>
+    <section class="section-center">
+        <form class="form-container">
+            <p class="alert"></p>
+            <h3>Grocery List</h3>
+            <div class="form-controls">
+                <input type="text" id="grocery" placeholder="e.g. eggs" />
+                <button type="button" class="form-btn">Submit</button>
+            </div>
+        </form>
+        <div class="grocery-container">
+            <div class="grocery-list">
+                <article class="grocery-item">
+                    <p class="title"></p>
+                    <div class="button-container">
+                        <button type="button" class="edit-btn">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button type="button" class="delete-btn">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </article>
+            </div>
+
+            <!-- clear grocery list items -->
+            <button type="button" class="clear">Clear Items</button>
+        </div>
+
+    </section>
     <script src="app.js"></script>
 </body>
+
 </html>
