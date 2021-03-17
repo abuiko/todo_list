@@ -32,7 +32,7 @@ function addElement(e) {
     const value = groceryInput.value;
     const valueID = new Date().getTime().toString();
     if (value && !editFlag) {
-        console.log('works');
+        displayAlert('item added to the list', 'green');
     } else if (value && editFlag) {
         console.log('editing');
     } else {
