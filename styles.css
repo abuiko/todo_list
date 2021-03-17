@@ -64,6 +64,10 @@ input {
     border-radius: 4px;
 }
 
+.form-btn:hover {
+    background: rgb(26, 26, 26);
+}
+
 .grocery-item {
     display: flex;
     align-items: center;
@@ -110,4 +114,23 @@ input {
     font-size: 1rem;
     color: rgb(255, 108, 108);
     cursor: pointer;
+}
+
+
+
+/* alert btns */
+.alert {
+    padding: 0.7rem 1rem;
+    border-radius: 10px;
+    ;
+}
+
+.alert-danger {
+    background: rgb(255, 222, 222);
+    color: rgb(255, 45, 45);
+}
+
+.alert-green {
+    background: rgb(211, 241, 186);
+    color: rgb(10, 83, 40);
 }

@@ -20,3 +20,35 @@ const clearBtn = document.querySelector('.celar-btn');
 let editElement;
 let editFlag = false;
 let editID = '';
+
+// event listeners
+
+formContainer.addEventListener('submit', addElement);
+
+// functions
+
+function addElement(e) {
+    e.preventDefault();
+    const value = groceryInput.value;
+    const valueID = new Date().getTime().toString();
+    if (value && !editFlag) {
+        console.log('works');
+    } else if (value && editFlag) {
+        console.log('editing');
+    } else {
+        displayAlert('please, enter value', 'danger');
+
+    }
+}
+
+// display alert
+function displayAlert(text, action) {
+    alert.textContent = text;
+    alert.classList.add(`alert-${action}`);
+
+    // remove alert
+    setTimeout(function () {
+        alert.textContent = '';
+        alert.classList.remove(`alert-${action}`);
+    }, 1000);
+}
