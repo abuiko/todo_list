@@ -73,6 +73,14 @@ input {
     padding: 0rem 1rem;
 }
 
+.grocery-list {
+    visibility: hidden;
+}
+
+.grocery-list.visible {
+    visibility: visible;
+}
+
 .title {
     margin: 0.7rem 0rem;
 }

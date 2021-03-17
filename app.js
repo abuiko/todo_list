@@ -14,3 +14,9 @@ const groceryContainer = document.querySelector('.grocery-container');
 const submitBtn = document.querySelector('.form-btn');
 const deleteBtn = document.querySelector('.delete-btn');
 const clearBtn = document.querySelector('.celar-btn');
+
+// edit 
+
+let editElement;
+let editFlag = false;
+let editID = '';
