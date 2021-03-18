@@ -13,7 +13,7 @@ const groceryContainer = document.querySelector('.grocery-container');
 // selected buttons
 const submitBtn = document.querySelector('.form-btn');
 const deleteBtn = document.querySelector('.delete-btn');
-const clearBtn = document.querySelector('.celar-btn');
+const clearBtn = document.querySelector('.clear-btn');
 
 // edit 
 
@@ -24,6 +24,7 @@ let editID = '';
 // event listeners
 
 formContainer.addEventListener('submit', addElement);
+clearBtn.addEventListener('click', clearItems);
 
 // functions
 
@@ -87,6 +88,19 @@ function setBackToDefault() {
     submitBtn.textContent = 'Submit';
 }
 
+function clearItems() {
+    const items = document.querySelectorAll('.grocery-item');
+    if (items.length > 0) {
+        items.forEach(item => {
+            list.removeChild(item);
+        });
+    }
+    groceryContainer.classList.remove('show-container');
+
+}
+
+
+//     LOCAL STORAGE
 function addTolocalStorage(id, value) {
     console.log('add to local storage');
 }
