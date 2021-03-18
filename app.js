@@ -55,6 +55,10 @@ function addElement(e) {
 
         // show container 
         groceryContainer.classList.add('show-container');
+        // add to local storage
+        addTolocalStorage(valueID, value);
+        // set back to default
+        setBackToDefault();
 
     } else if (value && editFlag) {
         console.log('editing');
@@ -74,4 +78,15 @@ function displayAlert(text, action) {
         alert.textContent = '';
         alert.classList.remove(`alert-${action}`);
     }, 1000);
+}
+
+function setBackToDefault() {
+    groceryInput.value = '';
+    editFlag = false;
+    editID = '';
+    submitBtn.textContent = 'Submit';
+}
+
+function addTolocalStorage(id, value) {
+    console.log('add to local storage');
 }
