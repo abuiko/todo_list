@@ -12,7 +12,6 @@ const groceryContainer = document.querySelector('.grocery-container');
 
 // selected buttons
 const submitBtn = document.querySelector('.form-btn');
-const deleteBtn = document.querySelector('.delete-btn');
 const clearBtn = document.querySelector('.clear-btn');
 
 // edit 
@@ -49,6 +48,13 @@ function addElement(e) {
                 <i class="fas fa-trash"></i>
             </button>
         </div>`;
+
+        const deleteBtn = element.querySelector('.delete-btn');
+        const editBtn = element.querySelector('.edit-btn');
+
+        deleteBtn.addEventListener('click', deleteItem);
+        editBtn.addEventListener('click', editItem);
+
         list.appendChild(element);
 
         // display alert
@@ -88,6 +94,15 @@ function setBackToDefault() {
     submitBtn.textContent = 'Submit';
 }
 
+function deleteItem(e) {
+    const groceryItem = e.currentTarget.parentElement.parentElement;
+    list.removeChild(groceryItem);
+}
+
+function editItem() {
+
+}
+
 function clearItems() {
     const items = document.querySelectorAll('.grocery-item');
     if (items.length > 0) {
@@ -96,9 +111,9 @@ function clearItems() {
         });
     }
     groceryContainer.classList.remove('show-container');
+    setBackToDefault();
 
 }
-
 
 //     LOCAL STORAGE
 function addTolocalStorage(id, value) {
