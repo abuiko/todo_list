@@ -133,6 +133,7 @@ function clearItems() {
     }
     groceryContainer.classList.remove('show-container');
     setBackToDefault();
+    localStorage.removeItem('list');
 
 }
 
@@ -160,11 +161,6 @@ function removeFromLocalStorage(id) {
 }
 
 function editLocalStorage(id, value) {
-    // local storage api
-    // setItem
-    // getItem
-    // removeItem
-    // save as strings
 
 }
 
